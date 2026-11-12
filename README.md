@@ -95,3 +95,9 @@ npm test
 Every file under the target theme output directories is generated, including Graphite. Never edit those files directly; edit a palette or the corresponding base instead.
 
 See [COLOR.md](COLOR.md) for the full color system: role definitions, derived colors, cross-target mappings, and how to add a new target or variant.
+
+## License
+
+The code and generators in this repository are released under the [MIT License](LICENSE).
+
+Zenkai's colors are derived from [Monokai Pro](https://monokai.pro). Before you publish a build to a marketplace, confirm that Monokai Pro's terms allow redistributing derived color schemes.

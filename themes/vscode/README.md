@@ -13,7 +13,7 @@
   <a href="#four-ways-to-settle-in">Palettes</a> ·
   <a href="#get-started">Installation</a> ·
   <a href="#make-it-yours">Settings</a> ·
-  <a href="https://github.com/Glvent/Zenkai">Source</a>
+  <a href="https://github.com/glvent/zenkai-themes">Source</a>
 </p>
 
 ---
@@ -54,7 +54,7 @@ Requires **VS Code 1.60 or later**. Terminal location matching requires **1.91 o
 <details>
 <summary><strong>Build and install from source</strong></summary>
 
-Clone the [repository](https://github.com/Glvent/Zenkai), then run these commands from its root:
+Clone the [repository](https://github.com/glvent/zenkai-themes), then run these commands from its root:
 
 ```sh
 cd themes/vscode
@@ -109,4 +109,4 @@ Settings take effect while a Zenkai theme is active. The extension applies theme
 
 Zenkai is a fork of [Monokai Pro](https://monokai.pro/vscode), with a quieter workbench and its own variant palettes.
 
-[Report an issue](https://github.com/Glvent/Zenkai/issues) · [Zed edition](https://github.com/Glvent/Zenkai/tree/main/themes/zed) · [Chrome edition](https://github.com/Glvent/Zenkai/tree/main/themes/chrome)
+[Report an issue](https://github.com/glvent/zenkai-themes/issues) · [Zed edition](https://github.com/glvent/zenkai-themes/tree/main/themes/zed) · [Chrome edition](https://github.com/glvent/zenkai-themes/tree/main/themes/chrome)

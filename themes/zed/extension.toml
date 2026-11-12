@@ -1,9 +1,9 @@
 id = "zenkai-themes"
 name = "Zenkai"
-version = "0.0.1"
+version = "1.0.0"
 schema_version = 1
-authors = ["Zenkai"]
-repository = "file:///V:/Zenkai"
+authors = ["George Vent <gvent2007@gmail.com>"]
+repository = "https://github.com/glvent/zenkai-themes"
 description = "Zenkai themes for Zed — Classic, Espresso, Nautilus, Graphite, Clay, and Paper."
 
 themes = [

@@ -6,9 +6,10 @@
   "publisher": "glvent",
   "icon": "assets/zenkai.png",
   "author": "George Vent <gvent2007@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Glvent/Zenkai.git",
+    "url": "https://github.com/glvent/zenkai-themes.git",
     "directory": "themes/vscode"
   },
   "main": "./dist/src/extension.js",
@@ -19,7 +20,7 @@
     "dev": "jiti scripts/build.ts dev",
     "generate": "jiti scripts/build.ts generate",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit && tsc -p tsconfig.tooling.json",
-    "package": "npm test && npx --yes @vscode/vsce package --allow-missing-repository --skip-license --baseImagesUrl https://github.com/Glvent/Zenkai/raw/HEAD/themes/vscode/",
+    "package": "npm test && npx --yes @vscode/vsce package --baseImagesUrl https://github.com/glvent/zenkai-themes/raw/HEAD/themes/vscode/",
     "install:local": "npm run package && jiti scripts/build.ts install",
     "version:patch": "npm version patch --no-git-tag-version",
     "format": "prettier --write \"**/*.{ts,json,md}\" && prettier --config .prettierrc --write \"../../src/**/*.ts\""
