@@ -80,7 +80,7 @@ Generators detect light palettes with `isLightPalette` in `src/palettes/color.ts
 
 | Role | Meaning | Graphite | Classic | Espresso | Nautilus | Clay | Paper |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `accent` | Primary accent: active tab/panel text, list and quick-pick selection, find/focus highlights, light bulb, strings | `#f0a84a` | `#ddb860` | `#c89878` | `#5278a0` | `#d97757` | `#8a5e10` |
+| `accent` | Primary accent: active tab/panel text, list and quick-pick selection, find/focus highlights, light bulb, strings, Chrome NTP links | `#f0a84a` | `#ddb860` | `#c89878` | `#5278a0` | `#d97757` | `#8a5e10` |
 | `error` | Errors, deletions, badges, keywords, tags | `#fc618d` | `#fc618d` | `#fc618d` | `#fc618d` | `#fc618d` | `#b03c5e` |
 | `warning` | Warnings, conflicts, modified files, parameters | `#fd9353` | `#fd9353` | `#fd9353` | `#fd9353` | `#fd9353` | `#a15018` |
 | `success` | Success, additions, checkboxes and radios, test run actions, functions | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#2b743f` |
@@ -241,7 +241,7 @@ Bracket pair colors (VS Code) and Zed `accents` use the same order: `error`, `wa
 
 - **VS Code:** Workbench `colors` and `tokenColors` are both remapped.
 - **Zed:** The entire `style` object is remapped, including syntax and terminal colors, plus the derived grays above.
-- **Chrome:** Colors are `[r, g, b]` arrays. Frame, tabs, NTP header, and buttons use `overlayBg`; toolbar, omnibox, NTP background, and text use the derived grays above. Only `ntp_link` (`[50, 50, 250]`) is fixed across variants. Taglines live in `taglineById` in `src/generators/chrome.ts`.
+- **Chrome:** Colors are `[r, g, b]` arrays. Frame, tabs, NTP header, and buttons use `overlayBg`; toolbar, omnibox, NTP background, and text use the derived grays above. NTP links use `accent`. Taglines live in `taglineById` in `src/generators/chrome.ts`.
 
 ## Adding a new target
 
