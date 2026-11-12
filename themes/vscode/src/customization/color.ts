@@ -47,3 +47,23 @@ export function getAlphaChannel(value: string): string | null {
   const normalized = normalizeHex(value);
   return normalized.length === 9 ? normalized.slice(7) : null;
 }
+
+// Blend two colors in RGB space; `amount` 0 keeps `from`, 1 returns `to`. Keeps `from`'s alpha.
+export function mixHex(from: string, to: string, amount: number): string {
+  const a = normalizeHex(from);
+  const b = normalizeHex(to);
+
+  if (!a || !b) {
+    return a;
+  }
+
+  const t = clamp(amount, 0, 1);
+  let rgb = "#";
+  for (let i = 1; i < 7; i += 2) {
+    const x = parseInt(a.slice(i, i + 2), 16);
+    const y = parseInt(b.slice(i, i + 2), 16);
+    rgb += toHexByte(x + (y - x) * t);
+  }
+
+  return rgb + a.slice(7);
+}

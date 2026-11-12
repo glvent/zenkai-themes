@@ -11,6 +11,7 @@ export type ThemeName =
 export interface RawSettings {
   accentCustomColor?: unknown;
   accentPresets?: Partial<Record<ThemeName, unknown>>;
+  borderContrast?: unknown;
   popupTransparency?: unknown;
   terminalMatchLocation?: unknown;
 }
@@ -19,6 +20,7 @@ export interface RawSettings {
 export interface NormalizedSettings {
   accentCustomColor: string;
   accentPresets: Partial<Record<ThemeName, string>>;
+  borderContrast: string;
   popupTransparency: number;
   terminalMatchLocation: boolean;
 }

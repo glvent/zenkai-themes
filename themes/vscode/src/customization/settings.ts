@@ -1,3 +1,4 @@
+import { BORDER_CONTRAST_DEFAULT, BORDER_CONTRAST_OPTIONS } from "./borders";
 import { getSupportedThemeNames } from "./catalog";
 import { normalizeHex, normalizeUnitInterval } from "./color";
 import type { NormalizedSettings, RawSettings } from "./types";
@@ -21,6 +22,11 @@ export function normalizeSettings(rawSettings: RawSettings = {}): NormalizedSett
   return {
     accentCustomColor: customColor.length === 7 ? customColor : "",
     accentPresets,
+    borderContrast:
+      typeof rawSettings.borderContrast === "string" &&
+      BORDER_CONTRAST_OPTIONS.includes(rawSettings.borderContrast)
+        ? rawSettings.borderContrast
+        : BORDER_CONTRAST_DEFAULT,
     popupTransparency: normalizeUnitInterval(rawSettings.popupTransparency),
     terminalMatchLocation: rawSettings.terminalMatchLocation === true,
   };
