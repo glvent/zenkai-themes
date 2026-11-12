@@ -20,7 +20,7 @@
       "frame_incognito_inactive": [32, 32, 32],
       "ntp_background": [18, 18, 18],
       "ntp_header": [32, 32, 32],
-      "ntp_link": [50, 50, 250],
+      "ntp_link": [240, 168, 74],
       "ntp_text": [250, 250, 250],
       "omnibox_background": [64, 64, 64],
       "omnibox_text": [250, 250, 250],
