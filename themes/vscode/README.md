@@ -31,7 +31,7 @@ _An overview of the bundled palette colors, not an editor screenshot._
 | **Zenkai Graphite** | Neutral grays and amber        | `#282828`         | `#f0a84a` |
 | **Zenkai Classic**  | Warm olive and muted gold      | `#282826`         | `#ddb860` |
 | **Zenkai Espresso** | Warm browns and soft copper    | `#282724`         | `#c89878` |
-| **Zenkai Nautilus** | Cool blue-grays and slate blue | `#292a2d`         | `#5278a0` |
+| **Zenkai Nautilus** | Cool blue-grays and slate blue | `#292a2d`         | `#7394b7` |
 | **Zenkai Clay**     | Near-black, clay accent        | `#1d1d1d`         | `#d97757` |
 | **Zenkai Paper**    | Light warm paper and ochre     | `#e9e7e1`         | `#8a5e10` |
 
@@ -91,7 +91,7 @@ Each variant has its own accent preset setting. The default keeps the bundled ac
 | `zenkai.accent.graphite` | Default (`#f0a84a`) | Sand `#e6c88a`, Copper `#d98b5f`, Steel `#7fa7cf`, Sage `#a6bf8f`          |
 | `zenkai.accent.classic`  | Default (`#ddb860`) | Olive `#b5b86a`, Khaki `#cdb98a`, Rust `#c97f56`, Moss `#8fae7a`           |
 | `zenkai.accent.espresso` | Default (`#c89878`) | Caramel `#d8a65c`, Cinnamon `#c0784e`, Latte `#d6bfa0`, Rosewood `#c48f8f` |
-| `zenkai.accent.nautilus` | Default (`#5278a0`) | Teal `#4f9a9a`, Sky `#7ab0d8`, Seafoam `#7fb8a4`, Indigo `#7b84c4`         |
+| `zenkai.accent.nautilus` | Default (`#7394b7`) | Teal `#4f9a9a`, Sky `#7ab0d8`, Seafoam `#7fb8a4`, Indigo `#7b84c4`         |
 | `zenkai.accent.clay`     | Default (`#d97757`) | Kraft `#d4a27f`, Crail `#c15f3c`, Claude Blue `#6a9bcc`, Sage `#a3b18a`    |
 | `zenkai.accent.paper`    | Default (`#8a5e10`) | Rust `#a3471f`, Navy `#2f5d8a`, Forest `#3f6e3a`, Plum `#7a4a7e`           |
 

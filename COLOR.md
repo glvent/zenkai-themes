@@ -80,7 +80,7 @@ Generators detect light palettes with `isLightPalette` in `src/palettes/color.ts
 
 | Role | Meaning | Graphite | Classic | Espresso | Nautilus | Clay | Paper |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `accent` | Primary accent: active tab/panel text, list and quick-pick selection, find/focus highlights, light bulb, strings | `#f0a84a` | `#ddb860` | `#c89878` | `#5278a0` | `#d97757` | `#8a5e10` |
+| `accent` | Primary accent: active tab/panel text, list and quick-pick selection, find/focus highlights, light bulb, strings | `#f0a84a` | `#ddb860` | `#c89878` | `#7394b7` | `#d97757` | `#8a5e10` |
 | `error` | Errors, deletions, badges, keywords, tags | `#fc618d` | `#fc618d` | `#fc618d` | `#fc618d` | `#fc618d` | `#b03c5e` |
 | `warning` | Warnings, conflicts, modified files, parameters | `#fd9353` | `#fd9353` | `#fd9353` | `#fd9353` | `#fd9353` | `#a15018` |
 | `success` | Success, additions, checkboxes and radios, test run actions, functions | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#7bd88f` | `#2b743f` |

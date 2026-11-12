@@ -55,7 +55,7 @@ export const nautilusVariant: ThemeVariantSource = {
 
     fgSidebar: "#8e8f94",
 
-    accent: "#5278a0",
+    accent: "#7394b7",
 
     purple: "#948ae3",
 

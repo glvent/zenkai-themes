@@ -11,7 +11,7 @@ A minimal, muted theme forked from Monokai Pro, with five dark variants and one 
 | **Graphite** | Neutral gray            | ![](assets/swatches/282828.svg) `#282828` | ![](assets/swatches/f0a84a.svg) `#f0a84a` |
 | **Classic**  | Warm olive cast         | ![](assets/swatches/282826.svg) `#282826` | ![](assets/swatches/ddb860.svg) `#ddb860` |
 | **Espresso** | Warm brown cast         | ![](assets/swatches/282724.svg) `#282724` | ![](assets/swatches/c89878.svg) `#c89878` |
-| **Nautilus** | Cool blue-gray cast     | ![](assets/swatches/292a2d.svg) `#292a2d` | ![](assets/swatches/5278a0.svg) `#5278a0` |
+| **Nautilus** | Cool blue-gray cast     | ![](assets/swatches/292a2d.svg) `#292a2d` | ![](assets/swatches/7394b7.svg) `#7394b7` |
 | **Clay**     | Near-black, clay accent | ![](assets/swatches/1d1d1d.svg) `#1d1d1d` | ![](assets/swatches/d97757.svg) `#d97757` |
 | **Paper**    | Light, warm off-white   | ![](assets/swatches/e9e7e1.svg) `#e9e7e1` | ![](assets/swatches/8a5e10.svg) `#8a5e10` |
 
