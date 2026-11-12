@@ -149,7 +149,7 @@ test("accent keys cover every bundled accent value in every theme", () => {
     "Zenkai Graphite": "#f0a84a",
     "Zenkai Classic": "#ddb860",
     "Zenkai Espresso": "#c89878",
-    "Zenkai Nautilus": "#5278a0",
+    "Zenkai Nautilus": "#7394b7",
     "Zenkai Clay": CLAY_ACCENT,
     "Zenkai Paper": "#8a5e10",
   };
@@ -239,7 +239,7 @@ test("package.json accent settings match the ACCENT_PRESETS module", () => {
     "Zenkai Graphite": "#f0a84a",
     "Zenkai Classic": "#ddb860",
     "Zenkai Espresso": "#c89878",
-    "Zenkai Nautilus": "#5278a0",
+    "Zenkai Nautilus": "#7394b7",
     "Zenkai Clay": CLAY_ACCENT,
     "Zenkai Paper": "#8a5e10",
   };
