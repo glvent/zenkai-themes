@@ -32,7 +32,7 @@ _An overview of the bundled palette colors, not an editor screenshot._
 | **Zenkai Classic**  | Warm olive and muted gold      | `#282826`         | `#ddb860` |
 | **Zenkai Espresso** | Warm browns and soft copper    | `#282724`         | `#c89878` |
 | **Zenkai Nautilus** | Cool blue-grays and slate blue | `#292a2d`         | `#5278a0` |
-| **Zenkai Clay**     | Near-black, clay accent        | `#1d1d1d`         | `#d97757` |
+| **Zenkai Clay**     | Near-black, blue accent        | `#202020`         | `#6a9bcc` |
 | **Zenkai Paper**    | Light warm paper and ochre     | `#e9e7e1`         | `#8a5e10` |
 
 ### Color where it counts
@@ -81,6 +81,7 @@ Choose a palette first, then adjust these optional settings in **Settings → Ex
 | ------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `zenkai.popupTransparency`     | `1`     | Popup opacity for menus, dropdowns, hovers, and suggestions. `1` is fully opaque; values between `0` and `1` add transparency. `0` leaves the bundled popup colors unchanged. |
 | `zenkai.terminalMatchLocation` | `false` | **Experimental · VS Code 1.91+.** Lets the terminal background follow its host panel, sidebar, or editor area.                                                                |
+| `zenkai.borderContrast`        | Default | Contrast of separators, widget outlines, and input borders: `Low`, `Default`, or `High`. Accent and status borders are unchanged.                                             |
 
 ### Accent
 
@@ -92,7 +93,7 @@ Each variant has its own accent preset setting. The default keeps the bundled ac
 | `zenkai.accent.classic`  | Default (`#ddb860`) | Olive `#b5b86a`, Khaki `#cdb98a`, Rust `#c97f56`, Moss `#8fae7a`           |
 | `zenkai.accent.espresso` | Default (`#c89878`) | Caramel `#d8a65c`, Cinnamon `#c0784e`, Latte `#d6bfa0`, Rosewood `#c48f8f` |
 | `zenkai.accent.nautilus` | Default (`#5278a0`) | Teal `#4f9a9a`, Sky `#7ab0d8`, Seafoam `#7fb8a4`, Indigo `#7b84c4`         |
-| `zenkai.accent.clay`     | Default (`#d97757`) | Kraft `#d4a27f`, Crail `#c15f3c`, Claude Blue `#6a9bcc`, Sage `#a3b18a`    |
+| `zenkai.accent.clay`     | Default (`#6a9bcc`) | Kraft `#d4a27f`, Crail `#c15f3c`, Claude Blue `#6a9bcc`, Sage `#a3b18a`    |
 | `zenkai.accent.paper`    | Default (`#8a5e10`) | Rust `#a3471f`, Navy `#2f5d8a`, Forest `#3f6e3a`, Plum `#7a4a7e`           |
 
 `zenkai.accentCustomColor` takes a `#RRGGBB` value, overrides the preset for every Zenkai theme, and is blank by default.

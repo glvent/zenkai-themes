@@ -1,19 +1,21 @@
 import { resolvePreset } from "./accents";
+import { BORDER_CONTRAST_LEVELS } from "./borders";
 import {
   ACCENT_ALPHA_KEYS,
   ACCENT_COLOR_KEYS,
+  BORDER_CONTRAST_KEYS,
   DEFAULT_COLOR_VALUE,
   POPUP_BACKGROUND_KEYS,
   TERMINAL_MATCH_KEYS,
 } from "./keys";
 import { SUPPORTED_THEMES } from "./catalog";
-import { getAlphaChannel, withAlpha, alphaFromTransparency } from "./color";
+import { getAlphaChannel, withAlpha, alphaFromTransparency, mixHex } from "./color";
 import { normalizeSettings } from "./settings";
 import type { RawSettings, ThemeCustomizationBlock, ThemeName } from "./types";
 
 /**
  * Build the managed color overrides for one bundled theme from normalized user preferences.
- * Each section applies one customization dimension: accent, terminal and popups.
+ * Each section applies one customization dimension: accent, borders, terminal and popups.
  */
 export function buildThemeOverrides(
   themeName: ThemeName,
@@ -45,6 +47,19 @@ export function buildThemeOverrides(
       const alpha = colors[colorKey] ? getAlphaChannel(colors[colorKey]) : null;
       if (alpha) {
         overrides[colorKey] = withAlpha(accentColor, alpha);
+      }
+    }
+  }
+
+  // normalizeSettings limits borderContrast to known options; Default has no level entry.
+  const borderLevel = BORDER_CONTRAST_LEVELS[settings.borderContrast];
+  const borderTarget =
+    borderLevel && colors[borderLevel.target === "background" ? "editor.background" : "foreground"];
+
+  if (borderLevel && borderTarget) {
+    for (const colorKey of BORDER_CONTRAST_KEYS) {
+      if (colors[colorKey]) {
+        overrides[colorKey] = mixHex(colors[colorKey], borderTarget, borderLevel.amount);
       }
     }
   }
