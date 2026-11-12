@@ -8,7 +8,8 @@ This document defines how Zenkai colors relate across theme targets (VS Code, Ze
 - Role values per variant: `src/palettes/variants/{graphite,classic,espresso,nautilus,clay,paper}.ts`.
 - Variant registry: `src/palettes/index.ts`, shared by all target generators.
 - Hand-authored Graphite inputs: `src/bases/{vscode,zed,chrome}.json`.
-- Generators: `src/generators/{vscode,zed,chrome}.ts`, run together by `src/generators/index.ts` through `npm run generate` in `themes/vscode`.
+- Terminal colors: `src/palettes/ansi.ts` (`ansiColors`), shared by the Ghostty, iTerm2, and Windows Terminal themes.
+- Generators: `src/generators/{vscode,zed,chrome,terminals}.ts`, run together by `src/generators/index.ts` through `npm run generate` in `themes/vscode`.
 
 Color swatches in `README.md` are SVGs in `assets/swatches/`, written by `src/generators/swatches.ts` during repository-wide generation. To add one, write `![](assets/swatches/<hex>.svg)` next to the color and regenerate; unused swatches are removed.
 
@@ -203,7 +204,9 @@ These VS Code token colors are not palette roles and stay identical in every var
 | white | `fg` |
 | bright black | `fgSubtle` |
 | bright white | `brightFg` |
-| background | `surfaceBg` (VS Code), `editorBg` (Zed) |
+| background | `surfaceBg` (VS Code), `editorBg` (Zed and terminal themes) |
+| cursor, selection text | `fg` (terminal themes) |
+| selection background | `interactionBg` (terminal themes) |
 
 ### Version control and diagnostics
 
@@ -241,6 +244,7 @@ Bracket pair colors (VS Code) and Zed `accents` use the same order: `error`, `wa
 
 - **VS Code:** Workbench `colors` and `tokenColors` are both remapped.
 - **Zed:** The entire `style` object is remapped, including syntax and terminal colors, plus the derived grays above.
+- **Terminals:** `src/generators/terminals.ts` has no Graphite base. It writes `ansiColors(palette)` to `themes/terminal/{ghostty,iterm2,windows-terminal}/`, and a test keeps those colors equal to the Zed terminal colors. VS Code differs only in bright white (`fg`) and background (`surfaceBg`).
 - **Chrome:** Colors are `[r, g, b]` arrays. Frame, tabs, NTP header, and buttons use `overlayBg`; toolbar, omnibox, NTP background, and text use the derived grays above. Only `ntp_link` (`[50, 50, 250]`) is fixed across variants. Taglines live in `taglineById` in `src/generators/chrome.ts`.
 
 ## Adding a new target
