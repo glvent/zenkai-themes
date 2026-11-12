@@ -2240,6 +2240,33 @@
       }
     }
   ],
+  "semanticTokenColors": {
+    "*.deprecated": {
+      "strikethrough": true
+    },
+    "class.defaultLibrary": {
+      "foreground": "#5ad4e6",
+      "fontStyle": "italic"
+    },
+    "type.defaultLibrary": {
+      "foreground": "#5ad4e6",
+      "fontStyle": "italic"
+    },
+    "function.defaultLibrary": "#7bd88f",
+    "variable.defaultLibrary": "#5ad4e6",
+    "selfParameter": {
+      "foreground": "#c3c2b7",
+      "fontStyle": "italic"
+    },
+    "clsParameter": {
+      "foreground": "#c3c2b7",
+      "fontStyle": "italic"
+    },
+    "selfKeyword": {
+      "foreground": "#c3c2b7",
+      "fontStyle": "italic"
+    }
+  },
   "name": "Zenkai Clay",
   "semanticHighlighting": true
 }

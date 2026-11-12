@@ -60,6 +60,37 @@ test("tokenColors share scopes and remap colors through each variant palette", (
   }
 });
 
+test("semanticTokenColors share selectors and remap colors through each variant palette", () => {
+  type SemanticStyle = string | { foreground?: string; fontStyle?: string; strikethrough?: boolean };
+  const semanticOf = (theme: { semanticTokenColors: object }) =>
+    theme.semanticTokenColors as Record<string, SemanticStyle>;
+  const graphiteSelectors = Object.keys(semanticOf(graphiteTheme));
+  const foregroundRoles = {
+    "class.defaultLibrary": "info",
+    "type.defaultLibrary": "info",
+    "function.defaultLibrary": "success",
+    "variable.defaultLibrary": "info",
+    selfParameter: "fgSecondary",
+    clsParameter: "fgSecondary",
+    selfKeyword: "fgSecondary",
+  } as const;
+
+  assert.deepEqual([...graphiteSelectors].sort(), ["*.deprecated", ...Object.keys(foregroundRoles)].sort());
+
+  for (const [themeName, theme, variant] of bundledThemes) {
+    const styles = semanticOf(theme);
+
+    assert.deepEqual(Object.keys(styles), graphiteSelectors, `${themeName} selectors diverged`);
+    assert.deepEqual(styles["*.deprecated"], { strikethrough: true }, `${themeName} deprecated style mismatch`);
+
+    for (const [selector, role] of Object.entries(foregroundRoles)) {
+      const style = styles[selector];
+      const foreground = typeof style === "string" ? style : style?.foreground;
+      assert.equal(foreground, variant.palette[role], `${themeName} ${selector} should use ${role}`);
+    }
+  }
+});
+
 test("bundled themes keep the managed keys required by customization", () => {
   const requiredKeys = new Set<string>([...MANAGED_COLOR_KEYS, "foreground"]);
 
