@@ -1,6 +1,6 @@
 # Zenkai
 
-A minimal, muted theme forked from Monokai Pro, with five dark variants and one light variant. Available for **VS Code**, **Zed**, and **Chrome**.
+A minimal, muted theme forked from Monokai Pro, with five dark variants and one light variant. Available for **VS Code**, **Zed**, **Chrome**, and the **Ghostty**, **iTerm2**, and **Windows Terminal** terminals.
 
 ---
 
@@ -39,6 +39,12 @@ This builds and tests the extension, packages a VSIX, and installs it into your 
 2. Click **Load unpacked**.
 3. Select a variant folder, such as `themes/chrome/zenkai-graphite`.
 
+### Terminals
+
+- **Ghostty:** Copy the files in `themes/terminal/ghostty/` to `~/.config/ghostty/themes/`, then set `theme = Zenkai Graphite` in your Ghostty config.
+- **iTerm2:** Open **Settings → Profiles → Colors → Color Presets → Import**, choose a file in `themes/terminal/iterm2/`, then pick it from **Color Presets**.
+- **Windows Terminal:** Open `settings.json` and add the objects in `themes/terminal/windows-terminal/zenkai.json` to the `schemes` array. Then set a profile's `colorScheme` to a name such as `"Zenkai Graphite"`.
+
 ## VS Code settings
 
 | Setting                        | Description                                                                                      |
@@ -54,7 +60,7 @@ This builds and tests the extension, packages a VSIX, and installs it into your 
 src/
 ├── palettes/       Shared roles, color helpers, and variant palettes
 ├── bases/          Hand-authored Graphite inputs for each target
-└── generators/     VS Code, Zed, Chrome, and documentation swatches
+└── generators/     VS Code, Zed, Chrome, terminals, and documentation swatches
 
 themes/
 ├── vscode/
@@ -64,7 +70,8 @@ themes/
 │   ├── themes/     Generated theme JSON shipped with the extension
 │   └── assets/     Extension icon
 ├── zed/            Zed extension and generated theme JSON
-└── chrome/         Generated Chrome theme manifests
+├── chrome/         Generated Chrome theme manifests
+└── terminal/       Generated Ghostty, iTerm2, and Windows Terminal themes
 ```
 
 ## Development commands
