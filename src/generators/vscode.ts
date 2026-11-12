@@ -10,10 +10,13 @@ const packageRoot = path.resolve(__dirname, "..", "..", "themes", "vscode");
 const themeSchema = "vscode://schemas/color-theme";
 type ThemeDocument = { colors: Record<string, string>; [key: string]: unknown };
 type TokenColorRule = { settings?: Record<string, string> } & Record<string, unknown>;
+// A semantic token style is a foreground hex or an object such as { foreground, fontStyle, strikethrough }.
+type SemanticTokenStyle = string | Record<string, string | boolean>;
 
 const baseTheme = graphiteTheme as ThemeDocument & {
   name?: string;
   semanticHighlighting?: boolean;
+  semanticTokenColors?: Record<string, SemanticTokenStyle>;
   tokenColors?: TokenColorRule[];
   type?: string;
 };
@@ -71,6 +74,7 @@ function buildThemeDocument(variant: ThemeVariantSource): ThemeDocument {
     type: isLightPalette(variant.palette) ? "light" : "dark",
     colors: buildWorkbenchColors(variant.palette),
     tokenColors: buildTokenColors(variant.palette),
+    semanticTokenColors: buildSemanticTokenColors(variant.palette),
     name: variant.name,
     semanticHighlighting: baseTheme.semanticHighlighting ?? true,
   };
@@ -98,6 +102,25 @@ function buildTokenColors(palette: ThemePalette): TokenColorRule[] {
     }
     return { ...rule, settings };
   });
+}
+
+function buildSemanticTokenColors(palette: ThemePalette): Record<string, SemanticTokenStyle> {
+  const nextStyles: Record<string, SemanticTokenStyle> = {};
+
+  for (const [selector, style] of Object.entries(baseTheme.semanticTokenColors ?? {})) {
+    if (typeof style === "string") {
+      nextStyles[selector] = mapColor(style, palette);
+      continue;
+    }
+
+    const nextStyle: Record<string, string | boolean> = {};
+    for (const [key, value] of Object.entries(style)) {
+      nextStyle[key] = typeof value === "string" ? mapColor(value, palette) : value;
+    }
+    nextStyles[selector] = nextStyle;
+  }
+
+  return nextStyles;
 }
 
 function mapColor(colorValue: string, palette: ThemePalette): string {
